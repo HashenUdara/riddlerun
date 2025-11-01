@@ -1,6 +1,4 @@
-import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
-import * as schema from '../lib/schema';
 import * as dotenv from 'dotenv';
 
 // Load environment variables
@@ -13,7 +11,6 @@ if (!connectionString) {
 }
 
 const client = postgres(connectionString);
-const db = drizzle(client, { schema });
 
 async function migrate() {
   try {

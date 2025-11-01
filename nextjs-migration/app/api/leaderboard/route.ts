@@ -35,7 +35,7 @@ export async function GET() {
         id: teams.id,
         name: teams.name,
         solved: count(teampath.id).as('solved'),
-        solvedTime: sql<Date>`MAX(${teampath.solvedTime})`.as('solvedTime'),
+        solvedTime: sql<string>`MAX(${teampath.solvedTime})::text`.as('solvedTime'),
       })
       .from(teams)
       .leftJoin(teampath, eq(teams.id, teampath.teamID))
@@ -48,7 +48,7 @@ export async function GET() {
         leaderboard.push({
           name: team.name,
           solved: 0,
-          solvedTime: team.solvedTime.toISOString(),
+          solvedTime: team.solvedTime,
           rank: rank++,
         });
       }

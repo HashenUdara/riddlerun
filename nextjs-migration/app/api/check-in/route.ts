@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import db from '@/lib/db';
 import { teams, checkpoints, teampath } from '@/lib/schema';
 import { eq, and } from 'drizzle-orm';
-import { sql } from 'drizzle-orm';
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,8 +23,6 @@ export async function POST(request: NextRequest) {
         desc: 'Authentication failed',
       });
     }
-
-    const team = teamResult[0];
 
     // Get checkpoint details
     const checkpointResult = await db.select().from(checkpoints).where(eq(checkpoints.hash, hash)).limit(1);
