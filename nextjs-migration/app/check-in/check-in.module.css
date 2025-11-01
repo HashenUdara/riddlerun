@@ -1,0 +1,146 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  font-family: 'Rubik', sans-serif;
+}
+
+.mainInner {
+  width: 70vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2.5vw;
+  padding-bottom: 1.2rem;
+}
+
+.confirm i {
+  font-size: 20vw;
+}
+
+.false i {
+  color: red;
+}
+
+.true i {
+  color: green;
+}
+
+.riddleWrapper {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.riddleWrapper blockquote,
+.riddleWrapper cite {
+  font-family: 'Special Elite', cursive;
+  color: #3f3f5a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.riddleWrapper blockquote {
+  font-weight: 100;
+  font-size: clamp(0.8rem, 4vw, 1.5rem);
+  max-width: 600px;
+  line-height: 1.4;
+  position: relative;
+  margin: 0;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+
+.riddleWrapper blockquote:before,
+.riddleWrapper blockquote:after {
+  position: absolute;
+  color: #f1efe6;
+  font-size: 8rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.riddleWrapper blockquote:before {
+  content: '"';
+  left: -3rem;
+  top: -2rem;
+}
+
+.riddleWrapper blockquote:after {
+  content: '"';
+  right: -3rem;
+  bottom: 1rem;
+}
+
+.riddleWrapper blockquote pre {
+  padding: 1rem 2rem;
+  background: #f3f3f3;
+  border-radius: 5px;
+  color: #3f3f5a;
+  font-size: clamp(0.6rem, 3vw, 1.5rem);
+  text-align: left;
+  font-family: inherit;
+}
+
+.author {
+  font-size: 1.2rem;
+  line-height: 3;
+  text-align: left;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer i {
+  vertical-align: middle;
+}
+
+.madeWithLove {
+  font-size: 1rem;
+}
+
+.madeWithLoveText {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.madeWithLoveText i {
+  color: red;
+  padding-right: 0.05rem;
+  animation: pound 0.35s infinite alternate;
+}
+
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (orientation: portrait) {
+  .mainInner {
+    width: 80vh;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .confirm i {
+    font-size: 40vw;
+  }
+}

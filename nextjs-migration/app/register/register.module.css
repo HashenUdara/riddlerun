@@ -1,0 +1,81 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+.mainInner {
+  width: 50vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2.5vw;
+  padding-bottom: 1.2rem;
+}
+
+.confirm i {
+  font-size: 20vw;
+}
+
+.false i {
+  color: red;
+}
+
+.true i {
+  color: green;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer i {
+  vertical-align: middle;
+}
+
+.madeWithLove {
+  font-size: 1rem;
+}
+
+.madeWithLoveText {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.madeWithLoveText i {
+  color: red;
+  padding-right: 0.05rem;
+  animation: pound 0.35s infinite alternate;
+}
+
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (orientation: portrait) {
+  .mainInner {
+    width: 80vh;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .confirm i {
+    font-size: 40vw;
+  }
+}
